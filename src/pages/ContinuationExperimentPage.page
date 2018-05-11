@@ -1,11 +1,19 @@
 <apex:page showHeader="false" sidebar="false" controller="ContinuationExperimentController">
 	<apex:form>
-        <apex:pageBlock title="Experiment with Continuation Object">
+        <apex:pageBlock title="Experiment with Continuation Object - Calling Service Async">
             <apex:commandButton action="{!callService}" value="Call Service" reRender="response" />
         </apex:pageBlock>
 
         <apex:pageBlock title="Response received from Service" id="response">
             <pre>{!res}</pre>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Experiment with Continuation Object - Calling Long Running Service Async">
+            <apex:commandButton action="{!callServiceWithLongRunSrv}" value="Call Long Running Service" reRender="responseLongRunServ" />
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Response received from Long Running Service" id="responseLongRunServ">
+            <pre>{!resLongRunServ}</pre>
         </apex:pageBlock>
     </apex:form>
 </apex:page>
