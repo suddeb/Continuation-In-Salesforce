@@ -1,6 +1,6 @@
 <apex:page showHeader="false" sidebar="false" controller="ContinuationExperimentController">
 	<apex:form>
-        <apex:pageBlock title="Experiment with Continuation Object - Calling Service Async">
+        <apex:pageBlock title="Experiment with Continuation - Calling Service Async">
             <apex:commandButton action="{!callService}" value="Call Service" reRender="response" />
         </apex:pageBlock>
 
@@ -8,7 +8,7 @@
             <pre>{!res}</pre>
         </apex:pageBlock>
 
-        <apex:pageBlock title="Experiment with Continuation Object - Calling Long Running Service Async">
+        <apex:pageBlock title="Experiment with Continuation - Calling Long Running Service Async">
             <apex:commandButton action="{!callServiceWithLongRunSrv}" value="Call Long Running Service" reRender="responseLongRunServ" />
         </apex:pageBlock>
 
@@ -16,4 +16,11 @@
             <pre>{!resLongRunServ}</pre>
         </apex:pageBlock>
     </apex:form>
+
+    <style type="text/css">
+        pre {
+            font-size   : 1em;
+            color  : green;
+        }
+    </style>
 </apex:page>
